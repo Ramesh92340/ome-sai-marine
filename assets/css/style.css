@@ -225,9 +225,9 @@ h6 {
   height: Hug (45px)px;
   top: 68px;
   left: 1103px;
-  padding:6px 19px 6px 19px;
+  padding: 6px 19px 6px 19px;
   gap: 10px;
-border-radius: 2px;
+  border-radius: 2px;
   opacity: 0px;
   color: #ffffff;
   background: #0079FF;
@@ -237,10 +237,34 @@ border-radius: 2px;
 
 }
 
-/* .appointment-btn:hover {
-  background: #0598d2;
+.appointment-btn:hover {
+  background: #F98122;
   color: #fff;
-} */
+}
+
+.appointment_btn_mobile {
+
+  width: Fixed (151px)px;
+  height: Hug (45px)px;
+  top: 68px;
+  left: 1103px;
+  padding: 6px 19px 6px 19px;
+  gap: 10px;
+  border-radius: 2px;
+  border: none;
+  opacity: 0px;
+  color: #ffffff !important;
+  background: #0079FF;
+  font-weight: 600;
+
+
+}
+
+.appointment_btn_mobile:hover {
+  background: #F98122;
+  color: #fff;
+}
+
 
 @media (max-width: 768px) {
   .appointment-btn {
@@ -272,7 +296,7 @@ border-radius: 2px;
 @media (min-width:1200px) {
   .navbar ul {
     margin: 0;
-    padding-left: 80px;
+    /* padding-left: 80px;   */
     display: flex;
     list-style: none;
     align-items: center;
@@ -295,7 +319,32 @@ border-radius: 2px;
 }
 
 .nav_logo {
-  width: 50%;
+  width: 35%;
+
+}
+
+@media (min-width:990px) and (max-width:1200px) {
+  .nav_logo {
+    margin-left: 70px;
+    width: 35%;
+
+  }
+}
+
+@media (min-width:1200px) and (max-width:1440px) {
+  .nav_logo {
+    margin-left: 110px;
+    width: 35%;
+
+  }
+}
+
+@media (min-width:1440px) {
+  .nav_logo {
+    margin-left: 170px;
+    width: 35%;
+
+  }
 }
 
 .navbar a,
@@ -324,7 +373,7 @@ border-radius: 2px;
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #0598d2;
+  color: #F98122;
 }
 
 .navbar .dropdown ul {
@@ -391,11 +440,11 @@ border-radius: 2px;
   }
 }
 
-/**
-* Mobile Navigation 
+/* 
+  Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #555555;
+  color: #ffffff;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -459,7 +508,7 @@ border-radius: 2px;
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #01a084;
+  color: #F98122;
 }
 
 .navbar-mobile .dropdown ul {
@@ -494,6 +543,50 @@ border-radius: 2px;
 
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
+}
+
+
+
+
+@media (max-width: 991px) {
+
+  /* 1. Ensure the container spreads items to the edges */
+  #header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  /* 2. Show the toggle */
+  .mobile-nav-toggle {
+    display: block;
+    /* Ensure it's clickable and has space */
+    padding-left: 15px;
+    z-index: 9999;
+  }
+
+  /* 3. Make sure the logo doesn't shrink too much */
+  .logo_mobile {
+    width: 50% !important;
+  }
+
+
+}
+
+/* Ensure the navbar container itself doesn't block the layout */
+.navbar {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  #header .container {
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
 }
 
 /*--------------------------------------------------------------
@@ -686,22 +779,131 @@ border-radius: 2px;
   font-size: 15px;
 
 }
+
+ 
+
+@media (max-width: 770px) {
+  .mobile_padding{
+    padding-left: 33px;
+    padding-right: 33px
+  }
+  .hero_lineheight {
+  /* Set the desired height for the line itself */
+  line-height: 38px;
+
+}
+  .mobile-banner-container {
+    position: relative;
+    width: 100%;
+    min-height:  85vh;
+    /* Takes up 80% of the screen height */
+    background-image: url('../img/marine/mobile_banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    /* Centers text vertically */
+    justify-content: center;
+    /* Centers text horizontally */
+  }
+
+  /* Optional: Dark overlay to make text more readable */
+  .banner-overlay {
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -10%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .banner-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    /* Center text alignment */
+    color: #ffffff;
+  }
+
+
+   .banner-text-mobile {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    /* Center text alignment */
+    color: #ffffff;
+  }
+
+  .hero_heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+
+  .hero_para {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .hero_para_desc {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .banner_btn {
+    padding: 12px 30px;
+    border-radius: 50px;
+  }
+}
+
+.banner-container {
+  /* KEY: Makes this container the reference point for the text */
+  position: relative;
+  /* This ensures the container only takes up the space of the image, 
+       though img-fluid/Bootstrap often handles this. */
+  display: inline-block;
+}
+
 @media (min-width: 1200px) {
 
-.hero_heading {
-  font-size: 50px;
-  font-weight: bold;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  .hero_heading {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
 }
-}
+
 @media (min-width: 992px) and (max-width: 1200px) {
 
-.hero_heading {
-  font-size: 42px;
-  font-weight: bold;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  .hero_heading {
+    font-size: 42px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
 }
+
+
+@media (min-width: 770px) and (max-width: 992px) {
+
+  .hero_heading {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
 }
+
+
+
+
 .banner-image,
 .banner-image-mobile {
   /* Ensure the image takes up the full width of its container */
@@ -711,54 +913,315 @@ border-radius: 2px;
   /* Removes any default spacing issues */
 }
 
-@media (min-width: 1200px) {
 
-  .banner-text {
-    /* KEY: Takes it out of the normal flow and allows precise positioning */
-    position: absolute;
-    /* Example: Center the text in the middle of the banner */
-    top: 50%;
-    left: 50%;
-    /* Use transform to truly center the element relative to its own size */
-    transform: translate(-50%, -50%);
 
-    /* Basic styling for the text */
-    color: white;
-    /* Make the text visible against the dark banner */
-    text-align: center;
-    padding: 20px;
-    z-index: 10;
-    /* Ensures the text sits above the image */
-  }
+.banner-text {
+  /* KEY: Takes it out of the normal flow and allows precise positioning */
+  position: absolute;
+  /* Example: Center the text in the middle of the banner */
+  top: 45%;
+  left: 50%;
+  /* Use transform to truly center the element relative to its own size */
+  transform: translate(-50%, -50%);
+
+  /* Basic styling for the text */
+  color: white;
+  /* Make the text visible against the dark banner */
+  text-align: center;
+  padding: 20px;
+  /* z-index: 10; */
+  /* Ensures the text sits above the image */
 }
 
-@media(min-width: 992px) and (max-width: 1200px) {
+/* --- UPDATED CSS --- */
 
-  .banner-text {
-    /* KEY: Takes it out of the normal flow and allows precise positioning */
-    position: absolute;
-    /* Example: Center the text in the middle of the banner */
-    top: 40%;
-    left: 50%;
-    /* Use transform to truly center the element relative to its own size */
-    transform: translate(-50%, -50%);
 
-    /* Basic styling for the text */
-    color: white;
-    /* Make the text visible against the dark banner */
-    text-align: center;
-    padding: 20px;
-    z-index: 10;
-    /* Ensures the text sits above the image */
-  }
+#new-gallery .container {
+  /* Increase left and right padding for the desktop view */
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+  /* Adjust '50px' to whatever size you need */
 }
 
 
-/*--------------------------------------------------------------
+
+
+
+.pading_minus_top {
+  margin-top: -30px;
+}
+
+/* You might want to remove the padding for smaller screens */
+@media (max-width: 768px) {
+  #new-gallery .container {
+    padding-left: 15px !important;
+    /* Reset to standard mobile padding */
+    padding-right: 15px !important;
+  }
+}
+
+#new-gallery {
+  /* Updated path for better compatibility: Using /assets/... is safer if your CSS is in a subfolder */
+  background-image: url('../img/marine/bg_curve_line.png');
+
+  /* Ensure the image covers the section without repeating */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /* Keep other styling as needed */
+  min-height: 600px;
+  position: relative;
+}
+
+/* Optional: Darken the background slightly for better text contrast */
+#new-gallery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Removed background comment */
+  z-index: 0;
+}
+
+
+/* 2. Positioning Container for Individual Images (EQUAL HEIGHTS HERE) */
+.image-overlay-container {
+  position: relative;
+  overflow: hidden;
+  /* --- NEW/UPDATED FOR EQUAL HEIGHT --- */
+  height: 300px;
+  /* SET YOUR DESIRED FIXED HEIGHT HERE (e.g., 300px) */
+  border-radius: 10px;
+  /* Optional: Adds rounded corners seen in your output */
+}
+
+
+
+.gallery-img {
+  width: 100%;
+  /* --- NEW/UPDATED FOR EQUAL HEIGHT --- */
+  height: 100%;
+  object-fit: cover;
+  /* Forces image to cover the container without distorting */
+  display: block;
+}
+
+/* 3. Text Overlay Styling (UNCHANGED) */
+.image-text {
+  position: absolute;
+  color: white;
+  padding: 15px;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Specific position: Bottom Left Corner (UNCHANGED) */
+.image-text.bottom-left {
+  bottom: 0;
+  left: 0;
+  text-align: left;
+}
+
+
+
+@media (min-width:1200px) {
+  .paddinng_container {
+    padding-left: 150px !important;
+    padding-right: 150px !important;
+  }
+
+}
+
+
+
+
+@media (min-width:1400px) {
+
+  .poadding_left_div {
+    padding-right: 100px;
+  }
+
+  .image-overlay-container_welding_man {
+    position: relative;
+    overflow: hidden;
+    height: 380px;
+    /* Increased slightly to fit all your address text */
+    border-radius: 20px;
+
+    /* --- BACKGROUND IMAGE SETTINGS --- */
+    background-image: url('../img/marine/welding_man.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Optional: adds a light tint so text is easier to read */
+    background-blend-mode: overlay;
+    margin-left: 50px;
+    margin-right: 50px
+  }
+
+  .image_text_welding_card.full_box {
+
+
+    padding-left: 50px;
+  }
+
+}
+
+
+
+@media (min-width:1200px) and (max-width:1400px) {
+
+  .poadding_left_div {
+    padding-right: 45px;
+  }
+
+  .image-overlay-container_welding_man {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    /* Increased slightly to fit all your address text */
+    border-radius: 20px;
+
+    /* --- BACKGROUND IMAGE SETTINGS --- */
+    background-image: url('../img/marine/welding_man.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Optional: adds a light tint so text is easier to read */
+    background-blend-mode: overlay;
+    margin-left: 50px;
+    margin-right: 0px
+  }
+
+  .image_text_welding_card.full_box {
+
+
+    padding-left: 50px;
+  }
+
+}
+
+
+@media (min-width:990px) and (max-width:1200px) {
+
+  .image-overlay-container_welding_man {
+    position: relative;
+    overflow: hidden;
+    height: 420px;
+    /* Increased slightly to fit all your address text */
+    border-radius: 20px;
+
+    /* --- BACKGROUND IMAGE SETTINGS --- */
+    background-image: url('../img/marine/welding_man.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Optional: adds a light tint so text is easier to read */
+    background-blend-mode: overlay;
+    margin-left: 50px;
+
+  }
+
+  .image_text_welding_card.full_box {
+
+
+    padding-left: 35px;
+  }
+}
+
+@media (min-width:770px) and (max-width:990px) {
+
+
+  .image-overlay-container_welding_man {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    /* Increased slightly to fit all your address text */
+    border-radius: 20px;
+
+    /* --- BACKGROUND IMAGE SETTINGS --- */
+    background-image: url('../img/marine/welding_man.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Optional: adds a light tint so text is easier to read */
+    background-blend-mode: overlay;
+    margin-left: 50px;
+
+  }
+
+  .image_text_welding_card.full_box {
+
+
+    padding-left: 30px;
+  }
+}
+
+.construction_heading {
+  color: #0364B2;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.need_mrg_top {
+  margin-top: 30px;
+
+}
+
+.need_mrg_btm {
+  margin-bottom: 30px;
+
+}
+
+
+
+.inter_font_black_weldig_card {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  /* 'medium' is 500 */
+  font-size: 15px;
+  color: #5A5A5A;
+  margin-bottom: 2px;
+  /* Tightens the address lines */
+}
+
+@media (min-width:770px) {
+  .image_text_welding_card {
+    position: absolute;
+
+  }
+}
+
+.image_text_welding_card {
+
+  color: white;
+  padding: 15px;
+  z-index: 2;
+}
+
+/* Optional: Make the titles slightly smaller (UNCHANGED) */
+.image-text h4 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.image-text p {
+  font-size: 0.9rem;
+}
+
+/* --------------------------- 
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 50px 0;
   overflow: hidden;
 }
 
@@ -781,6 +1244,48 @@ section {
 
 
 
+}
+
+
+@media (min-width:1400px) {
+
+  .ourservices_heading {
+    padding-left: 400px;
+    padding-right: 400px;
+    color: #0364B2;
+  }
+}
+
+@media (min-width:1200px) and (max-width:1400px) {
+
+  .ourservices_heading {
+    padding-left: 350px;
+    padding-right: 350px;
+    color: #0364B2;
+  }
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+
+  .ourservices_heading {
+    padding-left: 280px;
+    padding-right: 280px;
+    color: #0364B2;
+  }
+}
+
+@media (min-width:770px) and (max-width:992px) {
+
+  .ourservices_heading {
+    padding-left: 150px;
+    padding-right: 150px;
+    color: #0364B2;
+  }
+}
+
+.ourservices_heading {
+
+  color: #0364B2;
 }
 
 /* .section-title h2::after {
@@ -1878,181 +2383,110 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
+
+/* Footer Main Styling */
 #footer {
-  background: white;
-  /* padding: 0 0 5px 0; */
-  color: #555555;
+  color: #fff;
   font-size: 14px;
+}
+
+@media (min-width:1200px) and (max-width:1400px) {
+
+  .first_footer_logo_div {
+    padding-left: 120px;
+
+  }
+}
+
+@media (min-width:1400px) {
+  .first_footer_logo_div {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
 
 #footer .footer-top {
-  background: #F3F9FF !important;
-
+  /* Using your specific gradient values */
+  background: linear-gradient(to right, #003058 100%, #2b6b9fe3 130%);
+  padding: 80px 0 30px 0;
 }
 
-#footer .footer-top .footer-info {
-  margin-bottom: 30px;
+#footer .footer-logo {
+  max-width: 200px;
 }
 
-#footer .footer-top .footer-info h3 {
-  font-size: 24px;
-  margin: 0 0 20px 0;
-  padding: 2px 0 2px 0;
-  line-height: 1;
-  font-weight: 700;
-}
-
-#footer .footer-top .footer-info p {
-  font-size: 14px;
+#footer .footer-description {
   line-height: 24px;
-  margin-bottom: 0;
-  font-family: "Montserrat";
-  font-weight: 700;
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-#footer .footer-top .social-links a {
-  font-size: 18px;
-  display: inline-block;
-
-  background: #0E84D6;
-
-  color: #fff;
-  line-height: 1;
-  padding: 10px 0;
-  margin-right: 4px;
-  border-radius: 50px;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-
-#footer .footer-top .social-links a:hover {
-  /* background: #0598d2; */
-  text-decoration: none;
-}
-
-#footer .footer-top h4 {
+#footer h4 {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: bold;
   position: relative;
   padding-bottom: 12px;
-  font-family: "Montserrat";
-
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
-#footer .footer-top .footer-links {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-links ul {
+#footer .footer-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-#footer .footer-top .footer-links ul i {
-  padding-right: 2px;
-  color: #0598d2;
-  font-size: 18px;
-  line-height: 1;
-}
+#footer .footer-links ul li {
 
-#footer .footer-top .footer-links ul li {
-  padding: 10px 0;
   display: flex;
   align-items: center;
 }
 
-#footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
+/* Bullet points from Figma */
+#footer .footer-links ul li::before {
+  content: "•";
+  color: #fff;
+  font-size: 18px;
+  padding-right: 10px;
 }
 
-#footer .footer-top .footer-links ul a {
-  color: #555555;
+#footer .footer-links ul a {
+  color: rgba(255, 255, 255, 0.8);
   transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
-  font-family: "Montserrat";
-  font-weight: 500;
-
+  text-decoration: none;
 }
 
-.mini_text {
-  font-family: "Montserrat";
-
-  font-weight: 700;
-
-}
-
-.phone_email {
-  font-family: "Montserrat";
-  font-weight: 500;
-
-}
-
-#footer .footer-top .footer-links ul a:hover {
-  color: #0598d2;
-}
-
-#footer .footer-top .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border: 1px solid #d5d5d5;
-  border-radius: 4px;
-}
-
-#footer .footer-top .footer-newsletter form input[type=email] {
-  border: 0;
-  padding: 4px;
-  width: calc(100% - 110px);
-}
-
-#footer .footer-top .footer-newsletter form input[type=submit] {
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: #01a084;
+#footer .footer-links ul a:hover {
   color: #fff;
-  transition: 0.3s;
-
-  border-radius: 0 4px 4px 0;
+  padding-left: 5px;
 }
 
-#footer .footer-top .footer-newsletter form input[type=submit]:hover {
-  background: #037a69;
+/* Bottom Bar Styling */
+
+@media (min-width:990px) {
+
+  #footer .footer-bottom {
+    padding: 30px 96px 10px 96px;
+  }
 }
 
-#footer .copyright {
-  text-align: center;
-  padding-top: 30px;
-}
-
-.copyright {
+#footer .agency-name {
+  font-weight: bold;
   color: #fff;
 }
 
-.credits {
-  color: #fff;
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  #footer .footer-top {
+    padding: 40px 0 20px 0;
+  }
+
+  #footer .footer-links {
+    margin-bottom: 30px;
+  }
 }
 
-.credits a {
-  color: #fff;
-}
-
-
-#footer .credits {
-  padding-top: 10px;
-  text-align: center;
-  font-size: 13px;
-}
 
 /* Style for the WhatsApp link */
 .whatsapp-link {
@@ -2095,20 +2529,18 @@ section {
 
 }
 
-.welcome_text {
-  font-family: "Mukta Vaani", sans-serif;
-  font-weight: 800;
-  font-size: 39px;
-}
 
-.welcome_text_oncology {
+
+.about_heading {
   font-family: "Mukta Vaani", sans-serif;
 
   font-weight: 800;
-  font-size: 35px;
-  color: #A256B0;
+  font-size: 32px;
+  color: #0364B2;
   ;
 }
+
+
 
 @media (min-width:992px) {
 
@@ -2121,21 +2553,16 @@ section {
     padding-left: 100px !important;
   }
 
-  .dr_content_padding {
-    padding-left: 100px !important;
-    padding-right: 100px;
-    margin-top: 100px !important;
-  }
+
 
   .dr_welcome_text {
-    font-family: Poppins;
-    font-size: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 38px !important;
     font-weight: 700;
-    line-height: 50px;
-    letter-spacing: 0.20000000298023224px;
-    text-align: left;
-    color: #252B42;
 
+    text-align: left;
+    color: #0364B2;
+    margin-top: -6px;
   }
 
   .border_line_solid {
@@ -2170,46 +2597,184 @@ section {
 
 }
 
-.dr_welcome_text {
-  font-family: Poppins;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 50px;
-  letter-spacing: 0.20000000298023224px;
-  text-align: left;
-  color: #252B42;
+@media (max-width:992px) {
+
+  .dr_welcome_text {
+    font-weight: 700;
+
+    letter-spacing: 0.20000000298023224px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    text-align: left;
+    color: #0364B2;
+  }
 
 }
 
-.poetsen_font {
+.inter_font_black {
   font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: #9A9A9A;
+  font-weight: medium;
+  font-size: 15px;
+  color: #5A5A5A;
 
+}
+
+
+
+
+.inter_font_black_bold {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #5A5A5A;
+
+}
+
+.contact_line_hight {
+  margin-top: -15px !important;
 }
 
 .get_in_touch {
 
-  font-family: "Mulish", sans-serif;
-  font-size: 17.54px;
-  font-weight: 900;
-  line-height: 22.02px;
-  letter-spacing: 0.03em;
-  text-align: left;
-  color: #A256B0;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: medium;
+  /* line-height: 22.02px; */
+  padding: 8px 10px 8px 10px;
+
+  border-radius: 20px;
+  color: #ffffff;
+  background-color: #F98122;
+}
+
+
+.White_bg_btn {
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: medium;
+  /* line-height: 22.02px; */
+  padding: 8px 30px 8px 30px;
+  border: none;
+  border-radius: 20px;
+  color: #3D7FC4;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+@media (min-width:1200px) {
+
+  .inter_font_white {
+    font-family: "Inter", sans-serif;
+    font-weight: medium;
+    font-size: 15px;
+    padding: 0px 150px 0px 150px;
+    color: #ffffff;
+
+  }
+
+  .team_heading {
+    padding-left: 200px;
+    padding-right: 200px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+
+  .team_heading {
+    padding-left: 100px;
+    padding-right: 100px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+.gallery_btn {
+  background-image: linear-gradient(to right, #3B7AC0 0%, #0B5CB1 100%);
+  margin-top: 15px;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  padding: 8px 15px 8px 15px;
 
 }
 
 
 
-.main_images {
+/* 1. Styling the Background Container */
+.team_bg_img {
+
+  margin-top: 120px;
+  /* Set the height so the background image is visible */
+  height: 600px;
+
+  /* Set the background image (Adjust the path as needed) */
+  background-image: url('../img/marine/team_bg.png');
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  /* Use Flexbox properties to prepare for centering the content */
+  display: flex;
+  justify-content: center;
+  /* Centers content horizontally */
+  align-items: center;
+  /* Centers content vertically */
+
+  /* Optional: Ensure the text sits on top */
+  position: relative;
+  z-index: 1;
+}
+
+/* Optional: Add an overlay for better text readability */
+.team_bg_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* Dark overlay (40% opacity) */
+  z-index: -1;
+  /* Place the overlay behind the text */
+}
+
+/* 2. Styling the Centered Text */
+.centered-text {
+  color: white;
+  /* Choose a contrasting color */
+  text-align: center;
+  max-width: 80%;
+  /* Ensure text doesn't span the full width of the container */
+}
+
+@media (min-width:770px) {
+
+  .centered-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  }
+}
+
+@media (max-width:770px) {
+
+  .centered-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.navbar_bg {
   padding-top: 20px;
-  margin-bottom: -150px
-}
-
-
-.main_images {
+  padding-bottom: 20px;
   background: #3C83BD;
 }
 
@@ -2307,14 +2872,14 @@ section {
 
 .service_text {
 
-  font-family: "Mulish";
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20.08px;
-  letter-spacing: -0.02em;
+
   text-align: center;
-  color: #9A9A9A;
-  margin-bottom: 220px !important;
+
+
+  font-family: "Inter", sans-serif;
+  font-weight: medium;
+  font-size: 15px;
+  color: #5A5A5A;
 
 }
 
