@@ -14,10 +14,10 @@
          <div class="col-lg-2 col-md-2 col-6 footer-links">
            <h4>Quick Links</h4>
            <ul>
-             <li><a href="#">Home</a></li>
-             <li><a href="#">About</a></li>
-             <li><a href="#">Services</a></li>
-             <li><a href="#">Clients</a></li>
+             <li><a href="index.php">Home</a></li>
+             <li><a href="about.php">About</a></li>
+             <li><a href="services.php">Services</a></li>
+             <li><a href="infrastructure.php">Infrastructure</a></li>
              <li><a href="#">Gallery</a></li>
              <li><a href="#">Contact</a></li>
            </ul>

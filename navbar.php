@@ -67,9 +67,9 @@
 
         <ul>
           <li><a class="nav-link scrollto" href="index.php">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#facilities">Services</a></li>
-          <li><a class="nav-link scrollto" href=" ">Infrastructure</a></li>
+          <li><a class="nav-link scrollto" href="about.php">About Us</a></li>
+          <li><a class="nav-link scrollto" href="services.php">Services</a></li>
+          <li><a class="nav-link scrollto" href="infrastructure.php">Infrastructure</a></li>
           <li><a class="nav-link scrollto " href="#blogs_section">Projects</a></li>
           <button href="index.php#appointment" class="appointment_btn_mobile scrollto d-block d-lg-none" style="z-index: 999;">
             <span class="d-block d-lg-none">Contact</span>
