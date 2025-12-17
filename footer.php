@@ -2,16 +2,16 @@
  <footer id="footer">
    <div class="footer-top">
      <div class="container">
-       <div class="row row-gap-4">
+       <div class="row row-gap-4 need_padding_footer">
 
-         <div class="col-lg-5 col-md-6 footer-contact first_footer_logo_div">
+         <div class="col-lg-5 col-md-5 col-12 footer-contact first_footer_logo_div">
            <img src="assets/img/marine/logo.png" alt="Ome Sai Marine" class="img-fluid footer-logo mb-3">
            <p class="footer-description">
              Specialists in shipbuilding, repair, and marine engineering from Kakinada. Delivering reliable, cost-effective, and trusted marine solutions worldwide. Driven by quality, innovation, and a strong technical team. Building ships, serving oceans, and earning client trust.
            </p>
          </div>
 
-         <div class="col-lg-2 col-md-6 footer-links">
+         <div class="col-lg-2 col-md-2 col-6 footer-links">
            <h4>Quick Links</h4>
            <ul>
              <li><a href="#">Home</a></li>
@@ -23,7 +23,7 @@
            </ul>
          </div>
 
-         <div class="col-lg-3 col-md-6 footer-links">
+         <div class="col-lg-3 col-md-2 col-6 footer-links">
            <h4>Services Highlights</h4>
            <ul>
              <li><a href="#">Tug Construction</a></li>
@@ -33,7 +33,7 @@
            </ul>
          </div>
 
-         <div class="col-lg-2 col-md-6 footer-links">
+         <div class="col-lg-2 col-md-3 col-6 footer-links">
            <h4>Connect With Me</h4>
            <ul>
              <li><a href="#">Facebook</a></li>
@@ -97,7 +97,7 @@
      display: none;
      position: fixed;
      bottom: 115px;
-     right: 85px;
+     right: 25px;
      z-index: 999;
      padding: 9px 15px 9px 15px;
      /* padding: 10px 15px; */
@@ -128,7 +128,7 @@
  <!-- Template Main JS File -->
  <script src="assets/js/main.js"></script>
 
- <script>
+ <!-- <script>
    document.addEventListener('DOMContentLoaded', function() {
      var swiper = new Swiper('.mySwiper', {
        pagination: {
@@ -156,7 +156,7 @@
      //    });
      //  });
    });
- </script>
+ </script> -->
 
 
  </body>

@@ -110,7 +110,7 @@
     </div>
   </section>
 
-  <section id="new-gallery">
+  <section id="new-gallery" class="d-none d-md-block">
     <div class="container">
       <div class="row mb-4">
 
@@ -163,6 +163,65 @@
 
 
 
+  <section id="clients-slider" class="clients-slider  margin_alignes_services d-block d-md-none">
+    <div class="container" data-aos="fade-up">
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="image-overlay-container">
+              <img src="assets/img/marine/mobile_service_image_1.png" class="gallery-img" alt="Image 1">
+              <div class="image-text bottom-left">
+                <h4>Tug Construction</h4>
+                <p>Powerful and durable tugs designed for towing and port operations, built with precision and class approvals.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="image-overlay-container">
+              <img src="assets/img/marine/mobile_service_image_4.png" class="gallery-img" alt="Image 2">
+              <div class="image-text bottom-left">
+                <h4>Cargo Barges</h4>
+                <p>High-capacity barges for transporting bulk cargo and heavy loads across coastal and inland waterways.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="image-overlay-container">
+              <img src="assets/img/marine/mobile_service_image_3.png" class="gallery-img" alt="Image 3">
+              <div class="image-text bottom-left">
+                <h4>Flat top Pontoon</h4>
+                <p>Versatile pontoons for offshore operations, construction support, and cargo handling.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="image-overlay-container">
+              <img src="assets/img/marine/mobile_service_image_2.png" class="gallery-img" alt="Image 4">
+              <div class="image-text bottom-left">
+                <h4>Ship Repairs & Docking</h4>
+                <p>Expert repairs, fabrication, blasting, and painting services with modern docking facilities.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
 
   <section class="about ">
     <div class="container paddinng_container" data-aos="fade-up">
@@ -170,23 +229,24 @@
       <div class="row ">
         <div class="d-flex flex-row  ">
           <!-- <a href="#contact"> -->
-          <p class="get_in_touch">OUR SERVICES</p>
+          <p class="get_in_touch">OUR CLIENTS</p>
           <!-- </a> -->
         </div>
 
         <div class="col-md-6    " data-aos="fade-left">
-          <h2 class="dr_welcome_text">Trusted by Leading Marine Operators & Industries</h2>
+          <h2 class="client_heading">Trusted by Leading Marine Operators & Industries</h2>
         </div>
 
         <div class="col-md-6 " data-aos="fade-right">
-          <p class="inter_font_black">To built international class ships for clients on foundation of quality and cost effective with smart work culture & technical capabilities</p>
+          <p class="inter_font_black_client">To built international class ships for clients on foundation of quality and cost effective with smart work culture & technical capabilities</p>
         </div>
 
 
       </div>
 
       <div class="d-flex justify-content-center">
-        <img src="assets/img/marine/industries_img.png" class="img-fluid" alt="">
+        <img src="assets/img/marine/industries_img.png" class="img-fluid d-none d-md-block" alt="">
+        <img src="assets/img/marine/mobile_clients.png" class="img-fluid d-block d-md-none" alt="">
       </div>
 
 
@@ -211,9 +271,59 @@
       </div>
 
 
-      <div class="d-flex justify-content-center">
+      <div class="d-flex justify-content-center   d-none d-md-block">
         <img src="assets/img/marine/gallery_img.png" class="img-fluid" alt="">
       </div>
+
+    </div>
+  </section>
+
+
+  <section id="clients-slider" class="clients-slider margin_alignes_gallery d-block d-md-none">
+    <div class="container" data-aos="fade-up">
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <img src="assets/img/marine/work_img_1.png" class="img-fluid" alt="Client 1">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/img/marine/work_img_2.png" class="img-fluid" alt="Client 2">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/img/marine/work_img_3.png" class="img-fluid" alt="Client 3">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/img/marine/work_img_4.png" class="img-fluid" alt="Client 1">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/img/marine/work_img_5.png" class="img-fluid" alt="Client 2">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/img/marine/work_img_6.png" class="img-fluid" alt="Client 3">
+          </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <section>
+    <div class="container" data-aos="fade-up">
 
 
       <div class="team_bg_img">
@@ -234,6 +344,9 @@
 
     </div>
   </section>
+
+
+
 
   <!-- End Departments Section -->
 
@@ -256,11 +369,11 @@
           <div class="row">
 
 
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-6   col-7">
               <p class="inter_font_black_bold"> <img src="assets/img/marine/envolop.png" class="img-fluid" alt=""> Email</p>
-              <p class="inter_font_black contact_line_hight">info@omesaishipyard.com</p>
+              <p class="inter_font_black contact_line_hight  ">info@omesaishipyard.com</p>
             </div>
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-6   col-5">
               <p class="inter_font_black_bold"> <img src="assets/img/marine/telephone.png" class="img-fluid" alt=""> Contact</p>
               <p class="inter_font_black contact_line_hight">+91 94440 21209</p>
               <p class="inter_font_black contact_line_hight"> +91 99081 13999 </p>
@@ -292,14 +405,8 @@
             </div>
           </div>
 
-
-
-
         </div>
-
-
       </div>
-
     </div>
 
 
@@ -318,36 +425,34 @@
 
 
 
-
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      var swiper = new Swiper('.testimonials-slider', {
+      var swiper = new Swiper(".mySwiper", {
         loop: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
         },
         pagination: {
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
           clickable: true,
         },
-        autoplay: {
-          delay: 5000,
-        },
-        slidesPerView: 1, // Default slides per view (for screens < 768px)
+        // Responsive breakpoints
         breakpoints: {
-          // when window width is >= 768px
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 30
+          // When window width is <= 768px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          // When window width is > 768px (Desktop view)
+          769: {
+            slidesPerView: 4,
+            spaceBetween: 40
           }
         }
       });
     });
   </script>
-
-
-
 
 
 
@@ -372,20 +477,10 @@
 
 
 
-  <script>
-    function toggleAccordion(header) {
-      const content = header.nextElementSibling;
-      const icon = header.querySelector(".accordion-icon");
-
-      content.classList.toggle("open");
-      icon.classList.toggle("rotate");
-
-      icon.textContent = content.classList.contains("open") ? "−" : "+";
-    }
-  </script>
 
   <!-- End Contact Section -->
 
 </main><!-- End #main -->
+
 
 <?php include 'footer.php'; ?>
