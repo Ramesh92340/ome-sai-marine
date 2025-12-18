@@ -3561,7 +3561,7 @@ section {
 }
 
 .mission-banner {
-   
+
   /* Matching the curved edges in Figma */
   width: 100%;
 }
@@ -3604,7 +3604,7 @@ section {
 @media (max-width: 768px) {
   .about-us-section {
     text-align: left;
-    padding: 60px 15px   30px 15px;
+    padding: 60px 15px 30px 15px;
   }
 
   .about-subtitle {
@@ -3627,4 +3627,369 @@ section {
   .text_card_para {
     font-size: 16px;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Services Header --- */
+.services-main-title {
+  font-weight: 800;
+  font-size: 38px;
+  color: #111;
+  line-height: 1.2;
+}
+
+.services-main-desc {
+  max-width: 600px;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Figma Button Gradient */
+.services-btn-gradient {
+  background: linear-gradient(90deg, #3B7AC0 0%, #0B5CB1 100%);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+}
+
+/* --- Services List & Overlap --- */
+.service-img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-text-card {
+  background: #F0F7FF;
+  /* Light blue background from Figma */
+  padding: 40px;
+  position: relative;
+  z-index: 10;
+  border-radius: 4px;
+}
+
+.service-title {
+  color: #0364B2;
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.service-para {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.service-accent-line {
+  width: 100%;
+  height: 4px;
+  background: #3B7AC0;
+  margin-top: 20px;
+}
+
+
+
+/* DESKTOP OVERLAP LOGIC */
+@media (min-width: 992px) {
+
+  .service-row {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .card-right {
+    margin-left: -80px;
+    /* Pulls card over the image */
+  }
+
+  .card-left {
+    margin-right: -80px;
+    /* Pulls card over the image in reverse row */
+  }
+
+  .service-row {
+    margin-bottom: 100px !important;
+  }
+}
+
+/* MOBILE VIEW */
+@media (max-width: 991px) {
+  .service-text-card {
+    margin: -30px 15px 0 15px;
+    /* Sits below the image with slight upward overlap */
+    padding: 30px 20px;
+    text-align: left;
+  }
+
+  .services-main-title {
+    font-size: 30px;
+  }
+}
+
+.service-row {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+/* --- Services Header Styles --- */
+.services-main-title {
+  font-weight: 800;
+  font-size: 42px;
+  color: #111;
+  line-height: 1.1;
+  margin-top: 15px;
+}
+
+.services-main-desc {
+  max-width: 700px;
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* Figma Button Gradient */
+.services-btn-gradient {
+  background: linear-gradient(90deg, #3B7AC0 0%, #0B5CB1 100%);
+  color: white !important;
+  padding: 12px 35px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+/* --- Service Rows & Overlap --- */
+.service-img {
+  width: 100%;
+  border-radius: 8px;
+  /* Slightly curved edges like Figma */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-text-card {
+  background: #F0F7FF;
+  /* Exact light blue from Figma */
+  padding: 50px;
+  position: relative;
+  z-index: 10;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-title {
+  color: #0364B2;
+  font-weight: 800;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.service-para {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.service-accent-line {
+  width: 100%;
+  height: 4px;
+  background: #3B7AC0;
+  margin-top: 25px;
+}
+
+/* DESKTOP OVERLAP (992px and up) */
+@media (min-width: 992px) {
+  .service-row {
+    margin-bottom: 120px !important;
+  }
+
+  /* Pulls the card to the left to overlap the image */
+  .card-right {
+    margin-left: -100px;
+  }
+
+  /* Pulls the card to the right to overlap the image in reversed rows */
+  .card-left {
+    margin-right: -100px;
+  }
+}
+
+/* MOBILE VIEW (Stacked) */
+@media (max-width: 991px) {
+  .service-text-card {
+    margin: -40px 15px 0 15px;
+    /* Creates the upward overlap on mobile */
+    padding: 30px 20px;
+  }
+
+  .services-main-title {
+    font-size: 32px;
+  }
+
+  .service-row {
+    margin-bottom: 60px !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* --- Facilities Section Styles --- */
+.facilities-section {
+  background-color: #fff;
+}
+
+/* Styles for the text block container */
+.facility-text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  /* Ensures the block matches the image height on desktop */
+}
+
+
+/* Heading styles */
+.facility-title {
+  color: #0364B2;
+  /* Marine blue color */
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph text styles */
+.facility-text {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* --- Desktop-Specific Styles (Large Devices) --- */
+/* Applies the unique rounded corners only on screens wider than 991px */
+@media (min-width: 992px) {
+
+  .rounded-right-c {
+    background-image: linear-gradient(to left, #eaf4ff, #eaf4ff, #eaf5ff, #ebf5ff, #ebf5ff, #edf6ff, #f0f6ff, #f2f7ff, #f6f9ff, #fafbff, #fdfdff, #ffffff);
+  }
+
+  .rounded-left-c {
+    background-image: linear-gradient(to right, #eaf4ff, #eaf4ff, #eaf5ff, #ebf5ff, #ebf5ff, #edf6ff, #f0f6ff, #f2f7ff, #f6f9ff, #fafbff, #fdfdff, #ffffff);
+
+  }
+
+  /* Rounds the right side of the block */
+  .rounded-right-c {
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+  }
+
+  /* Rounds the left side of the block */
+  .rounded-left-c {
+    border-top-left-radius: 120px;
+    border-bottom-left-radius: 120px;
+  }
+
+  /* Adds a slight overlap effect for a more dynamic look */
+  .rounded-right-c {
+    margin-left: -30px;
+  }
+
+  .rounded-left-c {
+    margin-right: -30px;
+  }
+
+  .facility-text-block {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+/* --- Mobile-Specific Styles (Small Devices) --- */
+/* Adjusts the layout for screens smaller than 992px */
+@media (max-width: 991px) {
+
+
+
+  .rounded-right-c {
+  background-image: linear-gradient(to top, #eaf4ff, #eaf4ff, #eaf5ff, #ebf5ff, #ebf5ff, #edf6ff, #f0f6ff, #f2f7ff, #f6f9ff, #fafbff, #fdfdff, #ffffff);
+  }
+
+  .rounded-left-c {
+    background-image: linear-gradient(to right, #eaf4ff, #eaf4ff, #eaf5ff, #ebf5ff, #ebf5ff, #edf6ff, #f0f6ff, #f2f7ff, #f6f9ff, #fafbff, #fdfdff, #ffffff);
+
+  }
+
+  .facility-text-block {
+    border-radius: 70px;
+    /* Replaces specific corners with uniform rounded corners */
+    text-align: center;
+    /* Centers text for mobile */
+    padding: 30px !important;
+    /* Adjusts padding for smaller screens */
+  }
+
+  /* Resets margin used for desktop overlap */
+  .rounded-right-c,
+  .rounded-left-c {
+    margin: 0;
+  }
+}
+
+
+/* Container for the text block */
+.facility-text-block {
+
+  padding: 40px 50px;
+  max-width: 450px;
+  /* Keeps the capsule shape tight */
+  transition: all 0.3s ease;
+}
+
+.facility-img {
+  border-radius: 15px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.facility-title {
+  color: #0060B1;
+  /* Specific blue from design */
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.facility-text {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
