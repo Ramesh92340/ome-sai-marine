@@ -37,7 +37,7 @@
            <h4>Connect With Me</h4>
            <ul>
              <li><a href="#">Facebook</a></li>
-             <li><a href="#">Instagram</a></li>
+             <li><a href="https://www.instagram.com/omesaishipyard?igsh=ZHQ1NWl1bTlwZ2c5" target="_blank">Instagram</a></li>
              <li><a href="#">X (Twitter)</a></li>
              <li><a href="#">YouTube</a></li>
            </ul>
