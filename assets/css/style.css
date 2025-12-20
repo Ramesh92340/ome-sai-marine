@@ -851,6 +851,7 @@ h6 {
     text-align: left;
     /* Center text alignment */
     color: #ffffff;
+    margin-top:  -100px !important;
   }
 
   .hero_heading {
@@ -2564,7 +2565,7 @@ section {
   width: 50px;
   height: 50px;
   position: fixed;
-  bottom: 90px;
+  bottom: 45px;
   right: 20px;
   background-color: #25d366;
   color: #fff;
@@ -2576,6 +2577,11 @@ section {
 }
 
 
+
+.need_below_space{
+  margin-bottom: 40px !important
+  ;
+}
 
 .cor_med {
   padding-top: 100px;
@@ -2854,7 +2860,17 @@ section {
 
 }
 
+.gallery_btn:hover{
+  background-image: #F98122;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  padding: 8px 15px 8px 15px;
 
+}
 
 /* 1. Styling the Background Container */
 .team_bg_img {
@@ -3943,7 +3959,7 @@ section {
   }
 
   .rounded-left-c {
-    background-image: linear-gradient(to right, #eaf4ff, #eaf4ff, #eaf5ff, #ebf5ff, #ebf5ff, #edf6ff, #f0f6ff, #f2f7ff, #f6f9ff, #fafbff, #fdfdff, #ffffff);
+    background-image: linear-gradient(to top, #eaf4ff, #eaf4ff, #eaf5ff, #ebf5ff, #ebf5ff, #edf6ff, #f0f6ff, #f2f7ff, #f6f9ff, #fafbff, #fdfdff, #ffffff);
 
   }
 

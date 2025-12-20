@@ -5,11 +5,11 @@ $servername = "localhost";
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
     $username = "root";
     $password = "";
-    $dbname = "oncologist";
+    $dbname = "ome_sai_marine";
 } else {
-    $username = "askoncologist";
-    $password = "DEWzGnaO8rMVX3p";
-    $dbname = "askoncologist";
+    $username = "ome_sai_marine";
+    $password = " ";
+    $dbname = "ome_sai_marine";
 }
  
 

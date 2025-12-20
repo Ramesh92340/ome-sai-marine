@@ -25,7 +25,7 @@
                         support every stage of vessel construction, maintenance, and operation.
                     </p>
                     <div class="mt-4">
-                        <a href="#contact" class="  about-btn">Get In Touch</a>
+                        <a  href="https://wa.me/9444021209?text=I'm%20interested%20in%20your%20marine%20services" target="_blank" class="  about-btn">Get In Touch</a>
 
                     </div>
                 </div>
@@ -36,7 +36,7 @@
     <section class="services-list-section pb-5">
         <div class="container">
 
-            <div class="row align-items-center service-row" data-aos="fade-right">
+            <div class="row align-items-center service-row" id="Repairs" data-aos="fade-right">
                 <div class="col-lg-7">
                     <img src="assets/img/marine/ship_repairs.png" class="img-fluid service-img" alt="Ship Repairs">
                 </div>
@@ -71,7 +71,7 @@
                 </div>
             </div>
 
-            <div class="row align-items-center service-row" data-aos="fade-right">
+            <div class="row align-items-center service-row" id="Tugboats" data-aos="fade-right">
                 <div class="col-lg-7">
                     <img src="assets/img/marine/tug_bots.png" class="img-fluid service-img" alt="Tug Boats">
                 </div>
@@ -104,7 +104,7 @@
             </div>
 
 
-            <div class="row align-items-center service-row" data-aos="fade-right">
+            <div class="row align-items-center service-row" id="Ponton" data-aos="fade-right">
                 <div class="col-lg-7">
                     <img src="assets/img/marine/pantoon.png" class="img-fluid service-img" alt="Tug Boats">
                 </div>

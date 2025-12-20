@@ -18,18 +18,18 @@
              <li><a href="about.php">About</a></li>
              <li><a href="services.php">Services</a></li>
              <li><a href="infrastructure.php">Infrastructure</a></li>
-             <li><a href="#">Gallery</a></li>
-             <li><a href="#">Contact</a></li>
+             <li><a href="gallery.php">Gallery</a></li>
+             <li><a href="contact.php">Contact</a></li>
            </ul>
          </div>
 
          <div class="col-lg-3 col-md-2 col-6 footer-links">
            <h4>Services Highlights</h4>
            <ul>
-             <li><a href="#">Tug Construction</a></li>
-             <li><a href="#">Cargo Barges</a></li>
-             <li><a href="#">Flat Top Pontoon</a></li>
-             <li><a href="#">Ship Repairs & Docking</a></li>
+             <li><a href="services.php#Tugboats">Tug Construction</a></li>
+             <li><a href="services.php">Cargo Barges</a></li>
+             <li><a href="services.php#Ponton">Flat Top Pontoon</a></li>
+             <li><a href="services.php#Repairs">Ship Repairs & Docking</a></li>
            </ul>
          </div>
 
@@ -109,9 +109,9 @@
    }
  </style>
 
- <!-- <a href="https://api.whatsapp.com/send?phone= " style="color: #fff;" class="whatsapp-link" target="_blank">
+ <a href="https://api.whatsapp.com/send?phone=9444021209" style="color: #fff;" class="whatsapp-link" target="_blank">
    <i class="fab fa-whatsapp"></i>
- </a> -->
+ </a>
 
 
  <div id="preloader"></div>

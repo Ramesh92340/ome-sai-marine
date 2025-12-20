@@ -70,8 +70,8 @@
           <li><a class="nav-link scrollto" href="about.php">About Us</a></li>
           <li><a class="nav-link scrollto" href="services.php">Services</a></li>
           <li><a class="nav-link scrollto" href="infrastructure.php">Infrastructure</a></li>
-          <li><a class="nav-link scrollto " href="#blogs_section">Projects</a></li>
-          <button href="index.php#appointment" class="appointment_btn_mobile scrollto d-block d-lg-none" style="z-index: 999;">
+          <li><a class="nav-link scrollto" href="gallery.php">Gallery</a></li>
+          <button href="contact.php" class="appointment_btn_mobile scrollto d-block d-lg-none" style="z-index: 999;">
             <span class="d-block d-lg-none">Contact</span>
           </button>
         </ul>
@@ -80,7 +80,7 @@
 
       </nav>
 
-      <a href="index.php#appointment" class="appointment-btn scrollto d-none d-lg-block" style="z-index: 999;">
+      <a href="contact.php" class="appointment-btn scrollto d-none d-lg-block" style="z-index: 999;">
         <span class="d-none d-lg-inline">Contact</span>
       </a>
 

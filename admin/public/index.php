@@ -1,181 +1,234 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include '../../db.connection/db_connection.php';
 
-<head>
+// --- 1. HANDLE UPDATE LOGIC (Runs before HTML) ---
+if (isset($_POST['update_media'])) {
+    $id = intval($_POST['media_id']);
+    $new_title = mysqli_real_escape_string($conn, $_POST['title']);
+    $new_cat = intval($_POST['category_id']);
+    $new_type = $_POST['media_type'];
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    // Check if a NEW file was uploaded
+    if (!empty($_FILES['media_file']['name'])) {
 
-    <title>Ask Oncologist - Dashboard</title>
+        // A. Delete OLD file from folder
+        $old_res = $conn->query("SELECT file_path FROM media_table WHERE id = $id");
+        $old_data = $old_res->fetch_assoc();
+        if ($old_data) {
+            $old_path = "../uploads/gallery/" . $old_data['file_path'];
+            if (file_exists($old_path)) {
+                unlink($old_path);
+            }
+        }
 
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        // B. Upload NEW file
+        $target_dir = "../uploads/gallery/";
+        $file_ext = pathinfo($_FILES['media_file']['name'], PATHINFO_EXTENSION);
+        $db_filename = uniqid('media_') . '.' . $file_ext;
+        $target_file = $target_dir . $db_filename;
 
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+        if (move_uploaded_file($_FILES['media_file']['tmp_name'], $target_file)) {
+            $sql = "UPDATE media_table SET title='$new_title', category_id=$new_cat, media_type='$new_type', file_path='$db_filename' WHERE id=$id";
+        }
+    } else {
+        // No new file, update text only
+        $sql = "UPDATE media_table SET title='$new_title', category_id=$new_cat, media_type='$new_type' WHERE id=$id";
+    }
 
-</head>
+    $conn->query($sql);
+    header("Location: all_media.php?msg=updated");
+    exit();
+}
 
-<body id="page-top">
+// --- 2. HANDLE DELETE LOGIC ---
+if (isset($_GET['delete_id'])) {
+    $id = intval($_GET['delete_id']);
+    $file_query = $conn->query("SELECT file_path FROM media_table WHERE id = $id");
+    $file_data = $file_query->fetch_assoc();
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+    if ($file_data) {
+        $full_path = "../uploads/gallery/" . $file_data['file_path'];
+        if (file_exists($full_path)) {
+            unlink($full_path);
+        }
+        $conn->query("DELETE FROM media_table WHERE id = $id");
+        header("Location: all_media.php?msg=deleted");
+        exit();
+    }
+}
+?>
 
-        <!-- Sidebar -->
-        <?php
-        include 'sidebar.php';
-        ?>
-        <!-- End of Sidebar -->
+<?php include 'header.php'; ?>
+<?php include 'sidebar.php'; ?>
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+<div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
+        <?php include 'navbar.php'; ?>
 
-            <!-- Main Content -->
-            <div id="content">
+        <div class="container-fluid">
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-0 text-gray-800">Gallery Management</h1>
+                <a href="upload_media.php" class="btn btn-primary btn-sm shadow-sm">
+                    <i class="fas fa-upload fa-sm text-white-50"></i> Upload New Media
+                </a>
+            </div>
 
-                <!-- Topbar -->
-                <?php
-                include 'navbar.php';
-                ?>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
-                    </div>
-
-
-                    <!-- Content Row -->
-                    <style>
-                        .card-custom {
-                            margin: 6px;
-                            /* Reset margin to prevent extra space */
-                        }
-                    </style>
-                    </head>
-
-                    <body>
-                        <div class="container">
-                            <div class="row">
-                                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                    <h2 class="h2 mb-0 text-info mx-2">Recently Published Blogs</h2>
-                                </div>
-                                <div class='row row-custom no-gutters col-12'>
-                                    <?php
-                                    // Database connection (replace with your actual database connection details)
-                                    include '../../db.connection/db_connection.php';
-
-                                    // Fetch blog data ordered by created_at in descending order
-                                    $sql = "SELECT id, title, main_content, full_content, title_image, main_image FROM blogs ORDER BY created_at DESC";
-                                    $result = $conn->query($sql);
-
-                                    if ($result->num_rows > 0) {
-                                        while ($row = $result->fetch_assoc()) {
-                                            // Directly use the image path in the src attribute
-                                            $image_path = !empty($row['main_image']) ?  "../uploads/photos/{$row['main_image']}" : 'path_to_placeholder_image.jpg'; // Replace with your placeholder image path
-
-                                            // Output the blog card
-                                            echo "
-                                        <div class='col-12 col-md-4 col-custom'>
-                                            <div class='card card-custom'>
-                                         
-                                                <img src='{$image_path}' class='card-img-top' alt='Blog Image'>
-
-                                                <div class='card-body'>
-                                                    <h5 class='card-title' style='color:black;'>{$row['title']}</h5>
-                                                    <p class='card-text'>" . substr(strip_tags($row['main_content']), 0, 100) . "...</p>
-                                                </div>
-                                            </div>
-                                        </div>";
-                                        }
-                                    } else {
-                                        echo "<p>No blog posts found.</p>";
-                                    }
-
-                                    $conn->close();
-                                    ?>
-                                </div>
-
-
-
-                            </div> <!-- Pie Chart -->
-
-                        </div>
-                        <!-- /.container-fluid -->
-
+            <?php if (isset($_GET['msg'])): ?>
+                <div class="alert alert-success alert-dismissible fade show">
+                    Action completed successfully!
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
                 </div>
-                <!-- End of Main Content -->
+            <?php endif; ?>
 
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <div class="footer-widget__copyright">
-                                <p class="mini_text" style="color:black"> ©2024 Ask Oncologist . All Rights Reserved. Designed &
-                                    Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:black">Bhavi
-                                        Creations</a></p>
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Uploaded Images & Videos</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+                            <thead class="bg-light text-dark">
+                                <tr>
+                                    <th style="width: 5%;">S.No</th>
+                                    <th style="width: 15%;">Preview</th>
+                                    <th>Title</th>
+                                    <th>Category</th>
+                                    <th>Type</th>
+                                    <th class="text-center">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $query = "SELECT m.*, c.category_name 
+                                          FROM media_table m 
+                                          LEFT JOIN categories_table c ON m.category_id = c.id 
+                                          ORDER BY m.id DESC";
+                                $result = $conn->query($query);
+                                $sno = 1;
+
+                                if ($result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                        // Path construction for the browser
+                                        $display_path = "../uploads/gallery/" . $row['file_path'];
+                                ?>
+                                        <tr>
+                                            <td class="font-weight-bold"><?php echo $sno++; ?></td>
+                                            <td>
+                                                <?php if ($row['media_type'] == 'image'): ?>
+                                                    <a href="<?php echo $display_path; ?>" target="_blank">
+                                                        <img src="<?php echo $display_path; ?>" class="rounded shadow-sm" style="width: 100px; height: 60px; object-fit: cover;">
+                                                    </a>
+                                                <?php else: ?>
+                                                    <video width="120" height="70" controls muted class="rounded shadow-sm bg-dark">
+                                                        <source src="<?php echo $display_path; ?>" type="video/mp4">
+                                                        <source src="<?php echo $display_path; ?>" type="video/webm">
+                                                        Your browser does not support the video tag.
+                                                    </video>
+                                                <?php endif; ?>
+                                            </td>
+                                            <td class="text-dark"><?php echo $row['title']; ?></td>
+                                            <td><span class="badge badge-info"><?php echo $row['category_name'] ?? 'Uncategorized'; ?></span></td>
+                                            <td><span class="text-uppercase small font-weight-bold"><?php echo $row['media_type']; ?></span></td>
+                                            <td class="text-center">
+                                                <button class="btn btn-primary btn-circle btn-sm editMediaBtn"
+                                                    data-id="<?php echo $row['id']; ?>"
+                                                    data-title="<?php echo $row['title']; ?>"
+                                                    data-cat="<?php echo $row['category_id']; ?>"
+                                                    data-type="<?php echo $row['media_type']; ?>"
+                                                    data-toggle="modal" data-target="#editMediaModal">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <a href="all_media.php?delete_id=<?php echo $row['id']; ?>"
+                                                    class="btn btn-danger btn-circle btn-sm"
+                                                    onclick="return confirm('Delete this file permanently?')">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                <?php }
+                                } else {
+                                    echo "<tr><td colspan='6' class='text-center'>No media uploaded yet.</td></tr>";
+                                } ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php include 'footer.php'; ?>
+</div>
+
+<div class="modal fade" id="editMediaModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content border-left-primary shadow">
+            <div class="modal-header">
+                <h5 class="modal-title text-primary font-weight-bold">Edit Media Details</h5>
+                <button class="close" type="button" data-dismiss="modal"><span>×</span></button>
+            </div>
+            <form action="all_media.php" method="POST" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <input type="hidden" name="media_id" id="m_id">
+
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label class="text-dark font-weight-bold">Title / Caption</label>
+                            <input type="text" name="title" id="m_title" class="form-control" required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="text-dark font-weight-bold">Media Type</label>
+                            <select name="media_type" id="m_type" class="form-control" onchange="updateEditFileType()">
+                                <option value="image">Image</option>
+                                <option value="video">Video</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="text-dark font-weight-bold">Change Category</label>
+                            <select name="category_id" id="m_cat" class="form-control" required>
+                                <?php
+                                $cat_res = $conn->query("SELECT * FROM categories_table ORDER BY category_name ASC");
+                                while ($cat = $cat_res->fetch_assoc()) {
+                                    echo "<option value='{$cat['id']}'>{$cat['category_name']}</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+
+                        <div class="col-md-12 mb-2">
+                            <div class="p-3 bg-light border rounded">
+                                <label class="text-primary font-weight-bold">Replace Media File (Optional)</label>
+                                <input type="file" name="media_file" id="edit_file_input" class="form-control-file">
+                                <small class="text-muted">Keep empty to keep the current file. Choosing a new file deletes the old one.</small>
                             </div>
                         </div>
                     </div>
-                </footer>
-                <!-- End of Footer -->
-
-            </div>
-            <!-- End of Content Wrapper -->
-
-        </div>
-        <!-- End of Page Wrapper -->
-
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
-
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="logout.php">Logout</a>
-                    </div>
                 </div>
-            </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary" type="submit" name="update_media">Update Details</button>
+                </div>
+            </form>
         </div>
+    </div>
+</div>
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.querySelectorAll('.editMediaBtn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.getElementById('m_id').value = this.getAttribute('data-id');
+            document.getElementById('m_title').value = this.getAttribute('data-title');
+            document.getElementById('m_cat').value = this.getAttribute('data-cat');
+            document.getElementById('m_type').value = this.getAttribute('data-type');
 
-        <!-- Core plugin JavaScript-->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+            updateEditFileType(); // Adjust file accept types
+        });
+    });
 
-        <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin-2.min.js"></script>
-
-        <!-- Page level plugins -->
-        <script src="vendor/chart.js/Chart.min.js"></script>
-
-        <!-- Page level custom scripts -->
-        <script src="js/demo/chart-area-demo.js"></script>
-        <script src="js/demo/chart-pie-demo.js"></script>
-
-</body>
-
-</html>
+    function updateEditFileType() {
+        const type = document.getElementById('m_type').value;
+        const fileInput = document.getElementById('edit_file_input');
+        fileInput.accept = (type === 'image') ? "image/*" : "video/mp4,video/webm";
+    }
+</script>

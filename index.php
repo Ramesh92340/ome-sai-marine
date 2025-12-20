@@ -11,7 +11,11 @@
     <p class="hero_para  ">We are a trusted marine solutions provider specializing
       in Tug Construction, Cargo Barges,Flat Top Pontoons, and Marine Repairs.
       Tugs, Oil Tankers, Supply Vessels, Mini Bulk Carriers Cargo Barges, Flat Top Pontoons, Passenger Boats</p>
-    <a href="#" class="btn btn-primary">Get In Touch</a>
+    <a href="https://wa.me/9444021209?text=I'm%20interested%20in%20your%20marine%20services"
+      class="btn btn-primary"
+      target="_blank">
+      Get In Touch
+    </a>
   </div>
 
 </div>
@@ -30,7 +34,7 @@
         Top Pontoons, and Marine Repairs.Tugs, Oil Tankers, Supply Vessels, Mini Bulk Carriers Cargo Barges, Flat
         Top Pontoons, Passenger Boats
       </p>
-      <a href="#" class="btn btn-primary banner_btn">Get In Touch</a>
+      <a href="https://wa.me/9444021209?text=I'm%20interested%20in%20your%20marine%20services"  target="_blank" class="btn btn-primary banner_btn">Get In Touch</a>
     </div>
   </div>
 </div>
@@ -265,9 +269,8 @@
 
       <div class="section-title text-center">
         <h3 class="ourservices_heading">"Engineering Excellence for the Global Seas"</h3>
-        <p class="  text-center service_text">To built international class ships for clients on foundation of quality and cost effective with smart work culture & technical capabilities</p>
-        <button class="gallery_btn">All Gallery</button>
-
+        <p class="need_below_space  text-center service_text">To built international class ships for clients on foundation of quality and cost effective with smart work culture & technical capabilities</p>
+        <a href="gallery.php" class="gallery_btn">All Gallery</a>
       </div>
 
 
@@ -337,7 +340,7 @@
           <h2 class="team_heading">"Skilled People Behind Every Successful Project"</h2>
           <p class="inter_font_white">"Our strength lies in our experienced engineers, skilled technicians, and dedicated workforce who ensure quality and precision in every vessel we build."</p>
 
-          <button class="gallery_btn">See More</button>
+          <a href="infrastructure.php" class="gallery_btn">See More</a>
         </div>
       </div>
 

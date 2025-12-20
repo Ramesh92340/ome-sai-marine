@@ -20,7 +20,7 @@
             meet international standards while maintaining cost-effectiveness and reliability.
           </p>
           <div class="mt-4">
-            <a href="#contact" class="  about-btn">Get In Touch</a>
+            <a href="https://wa.me/9444021209?text=I'm%20interested%20in%20your%20marine%20services" target="_blank" class="  about-btn">Get In Touch</a>
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@
 
   <section class="mission-section">
 
-  
+
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center">
         <div class="col-lg-10 position-relative text-center">
