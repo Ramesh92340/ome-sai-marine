@@ -4,12 +4,12 @@ $servername = "localhost";
 // Determine if the server is localhost
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
     $username = "root";
+    $dbname = "omesaishipyard";
     $password = "";
-    $dbname = "ome_sai_marine";
 } else {
-    $username = "ome_sai_marine";
-    $password = " ";
-    $dbname = "ome_sai_marine";
+    $username = "u805775687_omesaishipyard";
+    $dbname = "u805775687_omesaishipyard";
+    $password = "omesaishipyard";
 }
  
 

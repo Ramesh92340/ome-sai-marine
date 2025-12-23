@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2025 at 11:46 AM
+-- Generation Time: Dec 23, 2025 at 11:26 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ome_sai_marine`
+-- Database: `omesaishipyard`
 --
 
 -- --------------------------------------------------------
@@ -62,10 +62,18 @@ CREATE TABLE `media_table` (
 --
 
 INSERT INTO `media_table` (`id`, `category_id`, `media_type`, `file_path`, `title`, `uploaded_at`) VALUES
-(4, 2, 'image', 'media_694659769a1ab.png', 'vfvd', '2025-12-20 08:08:22'),
-(5, 3, 'video', 'media_694668d1b0054.mp4', 'video', '2025-12-20 08:08:47'),
-(7, 2, 'image', 'media_694671e09c854.png', 'dcsdv', '2025-12-20 09:52:32'),
-(8, 4, 'image', 'media_694671fe30748.png', 'fdsvs', '2025-12-20 09:53:02');
+(9, 2, 'image', 'media_694a2b63c543e.jpg', 'smaple image', '2025-12-23 05:40:51'),
+(10, 3, 'image', 'media_694a2b9c3ad8c.jpg', 'sample', '2025-12-23 05:41:48'),
+(11, 4, 'image', 'media_694a2babee8b4.jpg', 'sample', '2025-12-23 05:42:03'),
+(12, 5, 'image', 'media_694a2bbb31b05.jpeg', 'sample', '2025-12-23 05:42:19'),
+(13, 2, 'image', 'media_694a2bc652de4.jpg', 'sample', '2025-12-23 05:42:30'),
+(14, 2, 'image', 'media_694a2bcf8c832.jpg', 'sample', '2025-12-23 05:42:39'),
+(15, 3, 'image', 'media_694a2bdc19dfa.jpg', 'sample', '2025-12-23 05:42:52'),
+(16, 4, 'image', 'media_694a2c25b0a39.jpg', 'sample', '2025-12-23 05:44:05'),
+(17, 4, 'image', 'media_694a2c3193678.jpg', 'sample', '2025-12-23 05:44:17'),
+(18, 4, 'image', 'media_694a2c3cdd140.jpg', 'sample', '2025-12-23 05:44:28'),
+(19, 4, 'image', 'media_694a2c4e3210f.jpeg', 'sample', '2025-12-23 05:44:46'),
+(20, 5, 'image', 'media_694a2c5b92c49.jpeg', 'sample', '2025-12-23 05:44:59');
 
 -- --------------------------------------------------------
 
@@ -87,11 +95,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `created_at`) VALUES
-(1, 'raj', 'kumar', 'raj@gmail.com', '39427bc27697ee48679772e4c07c13c1', '2024-07-04 15:48:59'),
-(2, 'vascular', 'onestop', 'onestopvascularkkd@gmail.com', '7c17c4fcf8ea300dc90090443ae3caa4', '2024-07-05 06:21:31'),
-(3, 'onestop', 'vascular', 'onestop@gmail.com', '742f6be9a59899c0a31f29b18f12d5f9', '2024-10-07 11:07:57'),
-(4, 'srinivasa', 'dental', 'srinivasadental@gmail.com', '6bb6774d4cec5dbfc18219af92312d37', '2024-10-08 05:21:55'),
-(5, 'free', 'bird', 'freebird@gmail.com', '5b1ce540a542e507fe9331ff753f6483', '2025-12-20 05:57:51');
+(1, 'free', 'bird', 'freebird@gmail.com', '5b1ce540a542e507fe9331ff753f6483', '2025-12-20 05:57:51');
 
 --
 -- Indexes for dumped tables
@@ -130,7 +134,7 @@ ALTER TABLE `categories_table`
 -- AUTO_INCREMENT for table `media_table`
 --
 ALTER TABLE `media_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `users`
