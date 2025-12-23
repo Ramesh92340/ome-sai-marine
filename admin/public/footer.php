@@ -4,8 +4,8 @@
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
                             <div class="footer-widget__copyright">
-                                <p class="mini_text" style="color:black"> ©2025 OME SAI MARINE . All Rights Reserved. Designed &
-                                    Developed by <a href="#" target="_blank" style="text-decoration: none;color:black">Free Bird</a></p>
+                                <p class="mini_text"  > ©2025 OME SAI MARINE . All Rights Reserved. Designed &
+                                    Developed by <a href="#" target="_blank" class="anchore_style"  >Free Bird</a></p>
                             </div>
                         </div>
                     </div>

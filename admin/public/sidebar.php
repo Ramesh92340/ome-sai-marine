@@ -1,9 +1,9 @@
-<ul class="navbar-nav   sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #A9A8D4;">
+<ul class="navbar-nav   sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #e78200de;">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center  bg-light text-primary" href="./index.php">
 
-        <div class="sidebar-brand-text mx-3">OME SAI MARINE</div>
+        <div class="sidebar-brand-text side_bar_heding_color mx-3">OME SAI MARINE</div>
     </a>
 
     <!-- Divider -->

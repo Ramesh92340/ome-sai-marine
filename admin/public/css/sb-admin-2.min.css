@@ -12608,3 +12608,34 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
     width: 100%
 }
+
+
+
+
+
+
+
+
+
+.side_bar_heding_color {
+    color: #fe6632 !important;
+}
+
+
+
+
+
+
+
+
+
+
+.mini_text {
+    color: #fe6632;
+}
+
+.anchore_style {
+    text-decoration: none;
+    color: #fe6632;
+    font-weight: bold;
+}
