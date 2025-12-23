@@ -851,7 +851,7 @@ h6 {
     text-align: left;
     /* Center text alignment */
     color: #ffffff;
-    margin-top:  -100px !important;
+    margin-top: -100px !important;
   }
 
   .hero_heading {
@@ -2560,27 +2560,83 @@ section {
 }
 
 
-/* Style for the WhatsApp link */
-.whatsapp-link {
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  bottom: 45px;
-  right: 20px;
-  background-color: #25d366;
-  color: #fff;
-  /* padding: 5px; */
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 35px;
-  text-align: center;
+
+
+@media (min-width:700px) {
+
+  /* Style for the WhatsApp link */
+  .whatsapp-link {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 45px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    /* padding: 5px; */
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  #scrollBtn {
+    display: none;
+    position: fixed;
+    bottom: 115px;
+    right: 25px;
+    z-index: 999;
+    padding: 9px 15px 9px 15px;
+    /* padding: 10px 15px; */
+    background-color: #F98122;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+@media (max-width:700px) {
+
+  /* Style for the WhatsApp link */
+  .whatsapp-link {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    /* padding: 5px; */
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  #scrollBtn {
+    display: none;
+    position: fixed;
+    bottom: 125px;
+    right: 25px;
+    z-index: 999;
+    padding: 9px 15px 9px 15px;
+    /* padding: 10px 15px; */
+    background-color: #F98122;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }
 
 
 
-.need_below_space{
-  margin-bottom: 40px !important
-  ;
+
+
+
+.need_below_space {
+  margin-bottom: 40px !important;
 }
 
 .cor_med {
@@ -2860,7 +2916,7 @@ section {
 
 }
 
-.gallery_btn:hover{
+.gallery_btn:hover {
   background-image: #F98122;
   margin-top: 15px;
   border-radius: 5px;
@@ -3955,7 +4011,7 @@ section {
 
 
   .rounded-right-c {
-  background-image: linear-gradient(to top, #eaf4ff, #eaf4ff, #eaf5ff, #ebf5ff, #ebf5ff, #edf6ff, #f0f6ff, #f2f7ff, #f6f9ff, #fafbff, #fdfdff, #ffffff);
+    background-image: linear-gradient(to top, #eaf4ff, #eaf4ff, #eaf5ff, #ebf5ff, #ebf5ff, #edf6ff, #f0f6ff, #f2f7ff, #f6f9ff, #fafbff, #fdfdff, #ffffff);
   }
 
   .rounded-left-c {
@@ -4009,3 +4065,34 @@ section {
   line-height: 1.6;
   margin-bottom: 0;
 }
+
+
+
+
+
+
+.footer-link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  color: #007bff;
+  /* Or your brand primary color */
+  text-decoration: underline;
+}
+
+/* Specific styling to keep the agency logo and text subtle */
+.credits small {
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+.agency-logo {
+  
+  z-index: 999999;
+}
+
+ 

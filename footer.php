@@ -50,12 +50,16 @@
          <div class="container d-md-flex py-4 justify-content-between align-items-center">
 
            <div class="copyright text-center text-md-start">
-             &copy; 2025 <strong><span>Ome sai marine</span></strong> | All Rights Reserved
+             &copy; 2025 <strong><span>Ome sai marine</span></strong> | All Rights Reserved |
+             <a href="privacy.php" class="footer-link ml-1">Privacy Policy</a> |
+             <a href="terms.php" class="footer-link ml-1">Terms of Use</a>
            </div>
 
            <div class="credits text-center text-md-end mt-3 mt-md-0 d-flex align-items-center justify-content-center justify-content-md-end">
-             <span class="me-2">Designed, Developed & Maintained by</span>
-             <img src="assets/img/free_bird/freebird_logo.png" alt="Free Bird" class="agency-logo">
+             <small class="text-muted me-2" style="font-size: 11px; letter-spacing: 0.3px;">
+               Designed, Developed & Maintained by
+             </small>
+             <img src="assets/img/free_bird/freebird_logo.png" alt="Free Bird" class="agency-logo"  >
            </div>
 
          </div>
@@ -92,22 +96,7 @@
    }
  </script>
 
- <style>
-   #scrollBtn {
-     display: none;
-     position: fixed;
-     bottom: 115px;
-     right: 25px;
-     z-index: 999;
-     padding: 9px 15px 9px 15px;
-     /* padding: 10px 15px; */
-     background-color: #F98122;
-     color: white;
-     border: none;
-     border-radius: 50%;
-     cursor: pointer;
-   }
- </style>
+
 
  <a href="https://api.whatsapp.com/send?phone=9444021209" style="color: #fff;" class="whatsapp-link" target="_blank">
    <i class="fab fa-whatsapp"></i>
