@@ -25,7 +25,7 @@
                         support every stage of vessel construction, maintenance, and operation.
                     </p>
                     <div class="mt-4">
-                        <a  href="https://wa.me/9444021209?text=I'm%20interested%20in%20your%20marine%20services" target="_blank" class="  about-btn">Get In Touch</a>
+                        <a href="https://wa.me/9444021209?text=I'm%20interested%20in%20your%20marine%20services" target="_blank" class="  about-btn">Get In Touch</a>
 
                     </div>
                 </div>
@@ -38,49 +38,51 @@
 
             <div class="row align-items-center service-row" id="Repairs" data-aos="fade-right">
                 <div class="col-lg-7">
-                    <img src="assets/img/marine/ship_repairs.png" class="img-fluid service-img" alt="Ship Repairs">
+                    <img src="assets/img/marine/ship_buildings.png" class="img-fluid service-img" alt="Ship Repairs">
                 </div>
                 <div class="col-lg-5">
                     <div class="service-text-card card-right">
-                        <h3 class="service-title">Ship Repairs</h3>
+                        <h3 class="service-title">Ship Buildings</h3>
                         <p class="service-para">
-                            We provide complete repair solutions for barges, dredgers, offshore vessels, and cargo ships. Our expert team ensures cost-effective and
-                            timely steel repairs, machinery upgrades, and system installations.
+                            We provide end-to-end shipbuilding services, covering engineering, production, and commissioning under one roof. Our steel-hulled vessels are custom-built
+                            to meet owner requirements, with a strong focus on quality, efficiency, and lifecycle performance.
                         </p>
                         <div class="service-accent-line"></div>
                     </div>
                 </div>
             </div>
-
 
 
             <div class="row align-items-center flex-row-reverse service-row" data-aos="fade-left">
                 <div class="col-lg-7">
-                    <img src="assets/img/marine/fishing_vessels.png" class="img-fluid service-img" alt="Ferry Vessels">
+                    <img src="assets/img/marine/ship_repairs.png" class="img-fluid service-img" alt="Ferry Vessels">
                 </div>
                 <div class="col-lg-5">
                     <div class="service-text-card card-left">
-                        <h3 class="service-title">Ferry &
-                            Fishing Vessels</h3>
+                        <h3 class="service-title">Ship Repairs</h3>
                         <p class="service-para">
-                            Designing and building ferries, river cruises, and fishing boats with high safety standards and class certifications.
-                            We customize vessels for passenger comfort and fishing requirements.
+                            Our shipyard delivers reliable ship repair, conversion, and refit services using advanced equipment and well-equipped workshops. Backed by skilled and committed professionals,
+                            we ensure high standards, timely execution, and cost-effective solutions.
                         </p>
                         <div class="service-accent-line"></div>
                     </div>
                 </div>
             </div>
 
+
+
+
+
             <div class="row align-items-center service-row" id="Tugboats" data-aos="fade-right">
                 <div class="col-lg-7">
-                    <img src="assets/img/marine/tug_bots.png" class="img-fluid service-img" alt="Tug Boats">
+                    <img src="assets/img/marine/painting.png" class="img-fluid service-img" alt="Tug Boats">
                 </div>
                 <div class="col-lg-5">
                     <div class="service-text-card card-right">
-                        <h3 class="service-title">Tug Boats</h3>
+                        <h3 class="service-title">Blasting & Painting</h3>
                         <p class="service-para">
-                            Construction of powerful and reliable tugboats designed for port operations, offshore support,
-                            and utility use. Built for strength, safety, and performance.
+                            We offer advanced blasting and painting services using modern equipment and skilled teams to apply high-performance protective and anticorrosive coatings.
+                            These solutions enhance durability, minimize corrosion, and extend the service life of vessels.
                         </p>
                         <div class="service-accent-line"></div>
                     </div>
@@ -93,7 +95,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="service-text-card card-left">
-                        <h3 class="service-title">Mini Bulkers & Tankers</h3>
+                        <h3 class="service-title">Quality, Safety & Compliance</h3>
                         <p class="service-para">
                             Designing and building ferries, river cruises, and fishing boats with high safety standards and class certifications.
                             We customize vessels for passenger comfort and fishing requirements.
@@ -104,21 +106,7 @@
             </div>
 
 
-            <div class="row align-items-center service-row" id="Ponton" data-aos="fade-right">
-                <div class="col-lg-7">
-                    <img src="assets/img/marine/pantoon.png" class="img-fluid service-img" alt="Tug Boats">
-                </div>
-                <div class="col-lg-5">
-                    <div class="service-text-card card-right">
-                        <h3 class="service-title">Flat Top Pontoon</h3>
-                        <p class="service-para">
-                            We build strong and stable flat top pontoons designed for heavy loads, offshore support, and marine construction.
-                            Each pontoon is durable, well-balanced, and built to class-approved safety standards.
-                        </p>
-                        <div class="service-accent-line"></div>
-                    </div>
-                </div>
-            </div>
+          
 
         </div>
     </section>
